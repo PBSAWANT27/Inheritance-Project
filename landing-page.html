@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management Platform</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navbar Styling */
+    nav {
+      background: black;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    nav .logo {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 5px 10px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover {
+      background:transparent
+      border-radius: 5px;
+    }
+
+    /* Dropdown Menu */
+    nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      top: 35px;
+      background: #444;
+      list-style: none;
+      padding: 10px 0;
+      border-radius: 5px;
+    }
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+    nav ul li .dropdown li {
+      padding: 5px 20px;
+    }
+    nav ul li .dropdown li a {
+      color: #fff;
+      font-size: 14px;
+    }
+    nav ul li .dropdown li a:hover {
+      background: #555;
+      border-radius: 3px;
+    }
+
+    /* CTA Button */
+    .cta {
+      background: #0779e4;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .cta:hover {
+      background: #005bb5;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav>
+    <div class="logo">Luminate</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li>
+        <a href="#">Services</a>
+        <ul class="dropdown">
+          <li><a href="#">Weddings</a></li>
+          <li><a href="#">Corporate Events</a></li>
+          <li><a href="#">Parties</a></li>
+          <li><a href="#">Conferences</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#" class="cta">Plan Your Event</a></li>
+      <li><a href="#">Login</a> | <a href="#">Sign Up</a></li>
+    </ul>
+    <div class="hamburger">☰</div>
+  </nav>
+
+  <script>
+    // Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+<li><a href="#">HOME</a></li>
+<li><a href="#">Explore</a></li>
+<li><a href="#">Events</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#" class="cta">Plan Your Event</a></li>

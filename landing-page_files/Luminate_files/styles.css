@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --primary-color: #f3eae5;
+    --text-dark: #2c2724;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  img {
+    display: flex;
+    width: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+  }
+  
+  .nav__header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--text-dark);
+  }
+  
+  .nav__logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .nav__menu__btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+  }
+  
+body{
+    font-family: "Urbanist", serif;}
+    
